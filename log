@@ -38,3 +38,9 @@ heap.c:57:13: error: unused variable ‘temp’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6fee66a
+Tue 26 Sep 2023 01:30:25 AM UTC: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+9dbbfa5
