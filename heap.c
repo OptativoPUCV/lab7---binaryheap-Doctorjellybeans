@@ -16,15 +16,17 @@ typedef struct Heap{
   int capac;
 } Heap;
 
+/*
 heapElem* createElem(Heap* pq, void* data, int priority){
   
   heapElem* newElem = (heapElem*)malloc(sizeof(heapElem));
   newElem->data = data;
   newElem->priority = priority;
 
+  printf("createElem Exitoso\n");
   return newElem;
 }
-
+*/
 
 void* heap_top(Heap* pq){
   if (pq == NULL || pq->size == 0) return NULL;
@@ -43,7 +45,9 @@ void heap_push(Heap* pq, void* data, int priority){
     return;
   }
 
-  heapElem* newElem = createElem(pq, data, priority);
+  heapElem newElem;
+  newElem.data = data;
+  newElem.priority = priority;
 
   if (pq->size == pq->capac){
     pq->capac *= 2;
@@ -55,12 +59,13 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[i].data = newElem;
   pq->size++;
 
+  // [11,5,8,3,4]
   
-  //while (i != 0 && pq->heapArray[(i - 1) / 2].priority < pq->heapArray[i].priority){
-  //  swap(&(pq->heapArray[i]), &(pq->heapArray[(i - 1) / 2]));
-  //  
-  //  i = (i - 1) / 2;
-  //}
+  while (i != 0 && pq->heapArray[(i - 1) / 2].priority < pq->heapArray[i].priority){
+    swap(&(pq->heapArray[i]), &(pq->heapArray[(i - 1) / 2]));
+    
+    i = (i - 1) / 2;
+  }
   
 }
 

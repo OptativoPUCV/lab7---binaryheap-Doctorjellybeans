@@ -56,3 +56,13 @@ Tue 26 Sep 2023 01:31:56 AM UTC:
  tests:  2|2
 total_score: 20/70
 0a79852
+Tue 26 Sep 2023 01:42:36 AM UTC: 
+ heap.c | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:59:27: error: incompatible types when assigning to type ‘void *’ from type ‘heapElem’ {aka ‘struct nodo’}
+   59 |   pq->heapArray[i].data = newElem;
+      |                           ^~~~~~~
+Compilation failed
+5b3f5a5
