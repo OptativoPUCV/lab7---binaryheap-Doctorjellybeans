@@ -90,7 +90,7 @@ void heap_pop(Heap* pq){
       largest = right;
     }
 
-    if (left < pq->size && pq->heapArray[right].priority > pq->heapArray[largest].priority){
+    if (largest != i){
       swap(&(pq->heapArray[i]), &(pq->heapArray[largest]));
       i = largest;
     } else {
