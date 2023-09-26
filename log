@@ -66,3 +66,9 @@ heap.c:59:27: error: incompatible types when assigning to type ‘void *’ from
       |                           ^~~~~~~
 Compilation failed
 5b3f5a5
+Tue 26 Sep 2023 01:43:03 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|2
+total_score: 35/70
+4be8470
