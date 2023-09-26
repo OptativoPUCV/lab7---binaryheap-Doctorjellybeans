@@ -27,3 +27,14 @@ Tue 26 Sep 2023 01:27:41 AM UTC:
  tests:  2|2
 total_score: 20/70
 e4f0c75
+Tue 26 Sep 2023 01:30:13 AM UTC: 
+ heap.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:57:13: error: unused variable ‘temp’ [-Werror=unused-variable]
+   57 |   heapElem* temp;
+      |             ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6fee66a

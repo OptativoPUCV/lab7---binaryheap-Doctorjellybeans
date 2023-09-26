@@ -32,7 +32,11 @@ void* heap_top(Heap* pq){
   return pq->heapArray[0].data; // mmMMMMmmMmMm
 }
 
-
+void swap(heapElem* x, heapElem* y) {
+    heapElem temp = *x;
+    *x = *y;
+    *y = temp;
+}
 
 void heap_push(Heap* pq, void* data, int priority){
   if (pq == NULL || data == NULL || priority < 0){
@@ -53,9 +57,7 @@ void heap_push(Heap* pq, void* data, int priority){
   heapElem* temp;
 
   while (i != 0 && pq->heapArray[(i - 1) / 2].priority > pq->heapArray[i].priority){
-    temp = &(pq->heapArray[(i - 1) / 2]);
-    pq->heapArray[(i - 1) / 2] = pq->heapArray[i];
-    pq->heapArray[i] = *temp;
+    swap(&(pq->heapArray[i]), &(pq->heapArray[(i - 1) / 2]));
     
     i = (i - 1) / 2;
   }
