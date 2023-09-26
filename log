@@ -50,3 +50,9 @@ Tue 26 Sep 2023 01:31:12 AM UTC:
  tests:  2|2
 total_score: 20/70
 999f85c
+Tue 26 Sep 2023 01:31:56 AM UTC: 
+ heap.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+ tests:  2|2
+total_score: 20/70
+0a79852
